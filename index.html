@@ -39,58 +39,58 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Aveiro</a>
+                    <a href="#" id="Aveiro">Aveiro</a>
                 </li>
                 <li>
-                    <a href="#">Beja</a>
+                    <a href="#" id="Beja">Beja</a>
                 </li>
                 <li>
-                    <a href="#Braga" id="Braga">Braga</a>
+                    <a href="#" id="Braga">Braga</a>
                 </li>
                 <li>
-                    <a href="#">Bragança</a>
+                    <a href="#" id="Braganca">Bragança</a>
                 </li>
                 <li>
-                    <a href="#">Castelo Branco</a>
+                    <a href="#" id="CasteloBranco">Castelo Branco</a>
                 </li>
                 <li>
-                    <a href="#">Coimbra</a>
+                    <a href="#" id="Coimbra">Coimbra</a>
                 </li>
                 <li>
-                    <a href="#">Évora</a>
+                    <a href="#" id="Évora">Évora</a>
                 </li>
                 <li>
-                    <a href="#">Faro</a>
+                    <a href="#" id="Faro">Faro</a>
                 </li>
                 <li>
-                    <a href="#">Guarda</a>
+                    <a href="#" id="Guarda">Guarda</a>
                 </li>
                 <li>
-                    <a href="#">Leiria</a>
+                    <a href="#" id="Leiria">Leiria</a>
                 </li>
                 <li>
-                    <a href="#">Lisboa</a>
+                    <a href="#" id="Lisboa">Lisboa</a>
                 </li>
                 <li>
-                    <a href="#">Portalegre</a>
+                    <a href="#"  id="Portalegre">Portalegre</a>
                 </li>
                 <li>
-                    <a href="#">Porto</a>
+                    <a href="#" id="Porto">Porto</a>
                 </li>
                 <li>
-                    <a href="#">Santarém</a>
+                    <a href="#" id="Santarém">Santarém</a>
                 </li>
                 <li>
-                    <a href="#">Setúbal</a>
+                    <a href="#" id="Setúbal">Setúbal</a>
                 </li>
                 <li>
-                    <a href="#">Viana do Castelo</a>
+                    <a href="#" id="VianadoCastelo">Viana do Castelo</a>
                 </li>
                 <li>
-                    <a href="#">Vila Real</a>
+                    <a href="#" id="VilaReal">Vila Real</a>
                 </li>
                 <li>
-                    <a href="#">Viseu</a>
+                    <a href="#" id="Viseu">Viseu</a>
                 </li>
             </ul>
         </div>
@@ -149,12 +149,32 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<div id="main" class="">Draft main page!!! something something</div>
+<div id="Aveiro1" class="hidden">Just some test for the testing! :DDD</div>
+<div id="Beja1" class="hidden"> beja div</div> 
+<div id="Braga1" class="hidden"> braga div</div> 
+<div id="Braganca1" class="hidden"> braganca div</div> 
+<div id="CasteloBranco1" class="hidden"> Castelo Branco div</div> 
+<div id="Coimbra1" class="hidden"> Coimbra div</div> 
+<div id="Évora1" class="hidden"> Évora div</div> 
+<div id="Faro1" class="hidden"> Faro div</div> 
+<div id="Guarda1" class="hidden"> Guarda div</div> 
+<div id="Leiria1" class="hidden"> Leiria div</div> 
+<div id="Lisboa1" class="hidden"> Lisboa div</div> 
+<div id="Portalegre1" class="hidden"> Portalegre div</div> 
+<div id="Porto1" class="hidden"> Porto div</div> 
+<div id="Santarém1" class="hidden"> Santarém div</div> 
+<div id="Setúbal1" class="hidden"> Setúbal div</div> 
+<div id="VianadoCastelo1" class="hidden"> VianadoCastelo div</div>     
+<div id="VilaReal1" class="hidden"> VilaRealo div</div> 
+<div id="Viseu1" class="hidden"> Viseu div</div> 
 
-<div id="Aveiro1" class="">Just some test for the testing! :DDD </div>
-<div id="Braga1" class="hidden"> This does not show yet!</div> 
+                  
 
 
-                
+
+
+
                     </div>
                 </div>
             </div>
@@ -172,23 +192,131 @@
 
     <!-- Menu Toggle Script -->
     <script>
+
+
+    var distritosArray = ["Aveiro",
+							"Beja",
+							"Braga",
+							"Braganca",
+							"CasteloBranco",
+							"Coimbra",
+							"Évora",
+							"Faro",
+							"Guarda",
+							"Leiria",
+							"Lisboa",
+							"Portalegre",
+							"Porto",
+							"Santarém",
+							"Setúbal",
+							"VianadoCastelo",
+							"VilaReal", 
+							"Viseu"];
+
+
+    function cleaningDivs(e){
+    	for(var i = 0; i < distritosArray.length; i++){
+    		if(e != distritosArray[i]){
+    			$("#" + distritosArray[i] + "1").addClass("hidden");
+    		}
+    	}
+    	$("#main").addClass("hidden");
+    	$("#" + e + "1").removeClass("hidden");
+    }
+
+
     $("#menu-toggle").click(function(e) {
-        e.preventDefault();
+        e.preventDefault(); // this prevents from opening other page
         $("#wrapper").toggleClass("toggled");
     });
     
-    $("#Braga").click(function(e) {
-        e.preventDefault();
-        $("#Aveiro1").addClass("hidden");
-        $("#Braga1").removeClass("hidden");
-        console.log("BragaScript");
+    /*
+	*
+	*  onclick events handlers for the districts id's
+	*	ONE DAY IT SHALL BE BETTER CODED  
+	*
+    */
+
+    $("#default").click(function(e) {
+    	e.preventDefault();
+    	for(var i = 0; i < distritosArray.length; i++){
+    		$("#" + distritosArray[i] + "1").addClass("hidden");
+    	}
+    	$("#main").removeClass("hidden");
+    });
+
+    $("#" + distritosArray[0]).click(function(e) {
+    	e.preventDefault();
+    	cleaningDivs(distritosArray[0]);
+      
+    });
+
+    $("#" + distritosArray[1]).click(function(e) {
+        cleaningDivs(distritosArray[1]);
     });
     
-    $("#default").click(function(e) {
-        e.preventDefault();
-        $("#Aveiro1").addClass("hidden");
-        $("#Braga1").addClass("hidden");
-        console.log("defaultS");
+    $("#" + distritosArray[2]).click(function(e) {
+        cleaningDivs(distritosArray[2]);
+    });
+
+    $("#" + distritosArray[3]).click(function(e) {
+       	cleaningDivs(distritosArray[3]);
+    });
+
+   	$("#" + distritosArray[4]).click(function(e) {
+   		cleaningDivs(distritosArray[4]);   
+    });
+
+   	$("#" + distritosArray[5]).click(function(e) {
+    	cleaningDivs(distritosArray[5]);
+    });
+
+ 	$("#" + distritosArray[6]).click(function(e) {
+  		cleaningDivs(distritosArray[6]);
+    });
+
+  	$("#" + distritosArray[7]).click(function(e) {
+       cleaningDivs(distritosArray[7]);
+    });
+
+  	 $("#" + distritosArray[8]).click(function(e) {
+       cleaningDivs(distritosArray[8]);
+    });
+
+   	$("#" + distritosArray[9]).click(function(e) {
+       cleaningDivs(distritosArray[9]); 
+    });
+
+   	$("#" + distritosArray[10]).click(function(e) {
+       cleaningDivs(distritosArray[10]); 
+    });
+
+  	$("#" + distritosArray[11]).click(function(e) {
+        cleaningDivs(distritosArray[11]);
+    });
+    
+   	$("#" + distritosArray[12]).click(function(e) {
+    	cleaningDivs(distritosArray[12]);
+    });
+
+   	$("#" + distritosArray[13]).click(function(e) {
+    	cleaningDivs(distritosArray[13]);
+    });
+
+   	$("#" + distritosArray[14]).click(function(e) {
+        cleaningDivs(distritosArray[14]);
+    });
+
+	$("#" + distritosArray[15]).click(function(e) {
+      	cleaningDivs(distritosArray[15]);
+    });
+
+  	$("#" + distritosArray[16]).click(function(e) {
+      cleaningDivs(distritosArray[16]);
+    });
+
+	$("#" + distritosArray[17]).click(function(e) {
+  		cleaningDivs(distritosArray[17]);
     });
     
     </script>
