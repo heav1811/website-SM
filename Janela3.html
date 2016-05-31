@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+  <style type="text/css">
+
+#eventForm .form-control-feedback {
+    top: 0;
+    right: -15px;
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">100Ideias</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a  onclick="window.location = 'main.html'" >Home</a></li>
+      <li><a  onclick="window.location = 'Janela1.html'">Find a Home</a></li>
+      <li><a  onclick="window.location = 'Janela2.html';">Help Me</a></li>
+      <li><a  onclick="window.location = 'https://www.icivics.org/games/activate';">Game</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+	  <h2>Offer Home</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+	
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+     <button type = "button" class = "btn btn-primary btn-lg btn-block">
+      Start Form
+   </button>
+  </form>
+  
+    <h2>Offer Food</h2>
+<form id="eventForm" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Date</label>
+        <div class="col-xs-5 date">
+            <div class="input-group input-append date" id="datePicker">
+                <input type="text" class="form-control" placeholder="DD-MM-AAAA" />
+                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+</form>
+  <h2>Voluntaring</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+     <button type = "button" class = "btn btn-primary btn-lg btn-block">
+      Start Form
+   </button>
+  </form>
+</div>
+
+</body>
+</html>
